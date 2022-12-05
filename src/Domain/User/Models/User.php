@@ -3,25 +3,19 @@
 namespace Domain\User\Models;
 
 use Database\Factories\UserFactory;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+/**
+ * @property int $id
+ */
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
-
-    /**
-     * Create a new factory instance for the model.
-     *
-     * @return \Illuminate\Database\Eloquent\Factories\Factory<static>
-     */
-    protected static function newFactory()
-    {
-        return new UserFactory();
-    }
 
     /**
      * The attributes that are mass assignable.
@@ -53,6 +47,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * Create a new factory instance for the model.
+     *
+     * @return Factory<User>
+     */
+    protected static function newFactory(): Factory
+    {
+        return UserFactory::new();
+    }
+
+    /**
+     * @return HasMany<Login>
+     */
     public function logins(): HasMany
     {
         return $this->hasMany(Login::class);

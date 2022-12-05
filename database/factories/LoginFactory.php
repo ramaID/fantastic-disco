@@ -5,7 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Login>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Domain\User\Models\Login>
  */
 class LoginFactory extends Factory
 {
@@ -14,7 +14,7 @@ class LoginFactory extends Factory
      *
      * @var class-string<\Illuminate\Database\Eloquent\Model|TModel>
      */
-    protected $model = 'Domain\User\Models\Login';
+    protected $model = '\Domain\User\Models\Login';
 
     /**
      * Define the model's default state.

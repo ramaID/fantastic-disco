@@ -3,6 +3,7 @@
 namespace Domain\User\Models;
 
 use Database\Factories\LoginFactory;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,10 +16,10 @@ class Login extends Model
     /**
      * Create a new factory instance for the model.
      *
-     * @return \Illuminate\Database\Eloquent\Factories\Factory<static>
+     * @return Factory<Login>
      */
-    protected static function newFactory()
+    protected static function newFactory(): Factory
     {
-        return new LoginFactory();
+        return LoginFactory::new();
     }
 }
