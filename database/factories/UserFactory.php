@@ -11,6 +11,13 @@ use Illuminate\Support\Str;
 class UserFactory extends Factory
 {
     /**
+     * The name of the factory's corresponding model.
+     *
+     * @var class-string<\Illuminate\Database\Eloquent\Model|TModel>
+     */
+    protected $model = 'Domain\User\Models\User';
+
+    /**
      * Define the model's default state.
      *
      * @return array<string, mixed>
