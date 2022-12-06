@@ -12,7 +12,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="h-full">
+<body class="h-full" x-init="{ open: false }">
     <div class="min-h-full">
         <nav class="bg-gray-800" x-data="{ open: false }">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,9 +33,9 @@
                     </div>
                     <div class="-mr-2 flex md:hidden">
                         <!-- Mobile menu button -->
-                        <button type="button"
+                        <button @click="open = !open" bind:aria-expanded="open.toString()" type="button"
                             class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                            aria-controls="mobile-menu" bind:aria-expanded="open.toString()" @click="open = !open">
+                            aria-controls="mobile-menu">
                             <span class="sr-only">Open main menu</span>
                             <!-- Menu open: "hidden", Menu closed: "block" -->
                             {{ svg('heroicon-o-bars-3', 'block', ['x-show' => '!open']) }}
