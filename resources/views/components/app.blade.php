@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ Vite::asset('resources/images/ramageek.svg') }}">
 
-    <title>Home</title>
+    <title>{{ getTitlePage() }}</title>
 
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     @livewireStyles
@@ -60,7 +60,7 @@
 
         <header class="bg-white shadow">
             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <h1 class="text-3xl font-bold text-gray-900">Home</h1>
+                <h1 class="text-3xl font-bold text-gray-900">{{ getTitlePage() }}</h1>
             </div>
         </header>
 
