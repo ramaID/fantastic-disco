@@ -5,6 +5,7 @@ use Illuminate\Contracts\Container\BindingResolutionException;
 if (! function_exists('getTitlePage')) {
     /**
      * @return string
+     *
      * @throws BindingResolutionException
      */
     function getTitlePage(): string
