@@ -1,6 +1,9 @@
-@props(['active' => false])
+@props(['href', 'isActive' => false, 'icon' => null])
 
-<a href="#" {{ $active ? 'aria-current="page"' : '' }}
-    class="{{ $active ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} block px-3 py-2 rounded-md text-base font-medium">
+<a href="{{ $href }}" {{ $isActive ? 'aria-current="page"' : '' }}
+    class="{{ $isActive ? 'bg-purple-50 border-purple-600 text-purple-600' : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900' }} group border-l-4 py-2 px-3 flex items-center text-base font-medium">
+    @if ($icon)
+        {!! $icon !!}
+    @endif
     {{ $slot }}
 </a>
