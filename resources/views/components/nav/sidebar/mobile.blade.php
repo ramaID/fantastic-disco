@@ -33,7 +33,7 @@
             <nav class="h-full flex flex-col">
                 <div class="space-y-1">
                     <x-nav.item-mobile href='/' :isActive="request()->is('/')">
-                        <svg class="{{ request()->is('/') ? 'text-purple-500' : 'text-gray-400' }} mr-4 flex-shrink-0 h-6 w-6"
+                        <svg class="{{ request()->is('/') ? 'text-red-500' : 'text-gray-400' }} mr-4 flex-shrink-0 h-6 w-6"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -43,7 +43,7 @@
                     </x-nav.item-mobile>
 
                     <x-nav.item-mobile href='/settings' :isActive="request()->is('settings')">
-                        <svg class="{{ request()->is('settings') ? 'text-purple-500' : 'text-gray-400' }} mr-4 flex-shrink-0 h-6 w-6"
+                        <svg class="{{ request()->is('settings') ? 'text-red-500' : 'text-gray-400' }} mr-4 flex-shrink-0 h-6 w-6"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
